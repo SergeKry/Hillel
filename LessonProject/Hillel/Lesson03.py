@@ -6,8 +6,8 @@ print(a1 == a2)                 # should be True
 print(a1 is a2, end='\n\n')     # should be True
 
 # 2. Створити 2 змінні з однаковими даними (і однаковим типом) та з різними ідентифікаторами
-b_1 = [1, 2, 3]
-b_2 = [1, 2, 3]
+b_1 = {1: 2, 3: 4}
+b_2 = {1: 2, 3: 4}
 print(b_1 == b_2)               # should be True
 print(b_1 is b_2, end='\n\n')   # should be False
 
