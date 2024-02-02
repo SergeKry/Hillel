@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f2f1820-a679-44e7-ba76-d6bcf26b2f85" name="Changes" comment="Adding megaprinter">
-      <change afterPath="$PROJECT_DIR$/LessonProject/CodeExercises/megaPrinter.py" afterDir="false" />
+    <list default="true" id="5f2f1820-a679-44e7-ba76-d6bcf26b2f85" name="Changes" comment="Adding Lesson03 HW">
+      <change afterPath="$PROJECT_DIR$/LessonProject/Hillel/Lesson03/HW3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LessonProject/Hillel/Lesson03/HW4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -54,23 +55,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.HW3.executor": "Run",
+    "Python.HW4.executor": "Run",
     "Python.Lesson02.executor": "Run",
     "Python.Lesson03.executor": "Run",
-    "Python.StringMethods.executor": "Run",
     "Python.Training.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.megaPrinter.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Сергей/PycharmProjects/LessonProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,7 +79,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -94,7 +91,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705509313879</updated>
-      <workItem from="1706878687714" duration="11718000" />
     </task>
     <task id="LOCAL-00001" summary="Repo creation and basic file push">
       <option name="closed" value="true" />
@@ -120,11 +116,32 @@
       <option name="project" value="LOCAL" />
       <updated>1706359320960</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="a line with original text output added">
+      <option name="closed" value="true" />
+      <created>1706360149905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706360149905</updated>
+    </task>
+    <task id="LOCAL-00005" summary="IDE setting added to git">
+      <option name="closed" value="true" />
+      <created>1706360342344</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706360342344</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding Lesson03 HW">
+      <option name="closed" value="true" />
+      <created>1706648349876</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706648349876</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -140,11 +157,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Repo creation and basic file push" />
     <MESSAGE value="removed .upper() for text_modified1" />
-    <MESSAGE value="Adding megaprinter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding megaprinter" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Hillel$StringMethods.coverage" NAME="StringMethods Coverage Results" MODIFIED="1706893993290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LessonProject/CodeExercises" />
-    <SUITE FILE_PATH="coverage/Hillel$Lesson03.coverage" NAME="Lesson03 Coverage Results" MODIFIED="1706694087395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LessonProject/Hillel" />
+    <MESSAGE value="a line with original text output added" />
+    <MESSAGE value="IDE setting added to git" />
+    <MESSAGE value="Adding Lesson03 HW" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Lesson03 HW" />
   </component>
 </project>
