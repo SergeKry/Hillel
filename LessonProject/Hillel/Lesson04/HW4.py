@@ -12,7 +12,5 @@ while True:
     else:
         print(f'{name.capitalize()}, ви брешете - у наш час стільки не живуть...')
     want_proceed = input('Бажаєте вийти? (Д/Y): ')
-    if want_proceed.upper() == 'Y' or want_proceed.upper() == 'Д':
+    if want_proceed.upper() in ('Y', 'Д'):
         break
-    else:
-        continue

@@ -9,4 +9,3 @@ print(users_text, text1, text2, text3, sep='<<<>>>')
 # writing to a file
 with open('hw4_output.txt', mode='w') as file:
     file.write('<<<>>>'.join([users_text, text1, text2, text3]))
-
