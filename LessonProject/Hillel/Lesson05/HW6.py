@@ -8,7 +8,7 @@ while iteration <= num:
     iteration += 1
 print(f'result while: {result1}')
 
-numbers = set(range(1, num + 1))
+numbers = range(1, num + 1)
 result2 = 0
 for i in numbers:
     if i % 3:
