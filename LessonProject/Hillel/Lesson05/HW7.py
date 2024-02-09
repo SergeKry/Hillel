@@ -6,8 +6,7 @@ chess_players = {
 "Nepomniachtchi, Ian": 2773
 }
 new_chess_players = {}
-for k in chess_players:
-    v = chess_players[k]
+for k, v in chess_players.items():
     if v > 2000:
         key_split = k.split(',')
         k = key_split[0]+key_split[1][:2]+'.'
