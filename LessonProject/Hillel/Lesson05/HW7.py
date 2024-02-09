@@ -5,10 +5,6 @@ chess_players = {
 "Caruana, Fabiano": 1792,
 "Nepomniachtchi, Ian": 2773
 }
-new_chess_players = {}
-for k, v in chess_players.items():
-    if v > 2000:
-        key_split = k.split(',')
-        k = key_split[0]+key_split[1][:2]+'.'
-        new_chess_players.update({v: k})
+
+new_chess_players = {v: k.split(',')[0]+k.split(',')[1][:2]+'.' for k, v in chess_players.items() if v > 2000}
 print(new_chess_players)
