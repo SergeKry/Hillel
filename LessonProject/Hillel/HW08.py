@@ -27,7 +27,6 @@ def start_game(tries, answer, game_range):
         elif guess > game_range:
             tries += 1
             print('Your number is bigger than the range you chose. Be careful')
-            continue
         elif guess < answer:
             print(f'Your guess is smaller. {tries} tries left')
         else:
