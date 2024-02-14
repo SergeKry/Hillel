@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 from datetime import date
 
-api_token = '6489865740:AAFBZXIOZR7B8MqT2ilnUzgFU0rrSooTEAc'
+api_token = '6489865740:AAFBZXIOZR7B8MqT2ilnUzgFU0rrSooTEAC'
 bot = telebot.TeleBot(api_token)
 
 status_updated = None
