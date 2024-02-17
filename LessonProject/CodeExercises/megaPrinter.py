@@ -75,11 +75,12 @@ numbers_dict = {0: zero, 1: one, 2: two, 3: three, 4: four, 5: five, 6: six, 7: 
 
 
 def get_input(userinput):
-    userlist = [numbers_dict.get(k) for k in [int(i) for i in userinput]]
+    input_listed = [int(i) for i in userinput]
+    userlist = []
+    for item in input_listed:
+        drawing_modified = [i.replace('*', f'{item}') for i in numbers_dict[item]]
+        userlist.append(drawing_modified)
     return userlist
-
-
-list_numbers = get_input(number)
 
 
 def draw_line(linecount):
@@ -89,6 +90,7 @@ def draw_line(linecount):
     return print(line)
 
 
+list_numbers = get_input(number)
 line_count = 0
 while line_count < 7:
     draw_line(line_count)
