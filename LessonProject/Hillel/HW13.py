@@ -11,7 +11,7 @@ def time_measure(func):
 
 
 @time_measure
-def iteration_with_loop():
+def iterations_with_loop():
     numbers = range(1, test_number + 1)
     result = 0
     for i in numbers:
@@ -21,7 +21,7 @@ def iteration_with_loop():
 
 
 @time_measure
-def iteration_with_reduce():
+def iterations_with_reduce():
     numbers = range(1, test_number + 1)
     result = functools.reduce(lambda a, b: a + b**3 if b % 3 else a + 0, numbers, 0)
     print(f'{result} reduce')
@@ -29,5 +29,5 @@ def iteration_with_reduce():
 
 test_number = 5555555
 
-iteration_with_loop()
-iteration_with_reduce()
+iterations_with_loop()
+iterations_with_reduce()
