@@ -3,7 +3,7 @@ def analysis(line):
     message = 'Ви ввели {} {} число: {}'
     text = line.replace(',', '.')
     alldigit_test = text.replace('.', '').replace('-', '')
-    if not alldigit_test.isdigit() or text.count('.') > 1 or text.count('-') > 1:
+    if not alldigit_test.isdigit() or text.count('.') > 1 or text[1:].count('-') > 0:
         return error.format(line)
     sign = "від'ємне" if text[0] == '-' else "позитивне"
     if '.' in text:
