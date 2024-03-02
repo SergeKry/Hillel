@@ -9,7 +9,7 @@ def build_line(dict_item):
     _id = dict_item[0]
     name = dict_item[1][0]
     age = dict_item[1][1]
-    probability = random.randint(1,100)
+    probability = random.randint(1, 100)
     if probability > 25:
         telephone = '+3(' + random.choice(phone_codes) + ')' + str(random.randint(1, 9999999)).rjust(7, '0')
     else:
