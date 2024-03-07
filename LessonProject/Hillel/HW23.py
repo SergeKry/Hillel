@@ -15,12 +15,12 @@ class Circle(Point):
         if self.radius == other.radius:
             return Point(self.x - other.x, self.y - other.y)
         else:
-            return Circle(self.x - other.x, self.y - other.y, abs(self.radius-other.radius))
+            return Circle(self.x - other.x, self.y - other.y, abs(self.radius - other.radius))
 
 
-a = Circle(1,2,3)
-b = Circle(1,2,2)
-c = Circle(3,4,3)
+a = Circle(1, 2, 3)
+b = Circle(1, 2, 2)
+c = Circle(3, 4, 3)
 
 standard = a - b
 negative = b - a
