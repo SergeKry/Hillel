@@ -8,5 +8,3 @@ class String(str):
             return String(str(self).replace(str(other), '', 1))
         else:
             return String(self)
-
-
