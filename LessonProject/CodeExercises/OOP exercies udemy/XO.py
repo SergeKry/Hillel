@@ -1,22 +1,21 @@
 class Game:
     def __init__(self):
-        self.slots_x = ['', '', '', '', '', '', '', '', '']
-        self.slots_o = ['', '', '', '', '', '', '', '', '']
-        self.win = ([True, True, True, False, False, False, False, False, False],
-                    [False, False, False, True, True, True, False, False, False],
-                    [False, False, False, False, False, False, True, True, True],
-                    [True, False, False, True, False, False, True, False, False],
-                    [False, True, False, False, True, False, False, True, False],
-                    [False, False, True, False, False, True, False, False, True],
-                    [True, False, False, False, True, False, False, False, True],
-                    [False, False, True, False, True, False, True, False, False])
+        self.slots = {1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: '', 9: ''}
+        self.win = ({1: True, 2: True, 3: True},
+                    {4: True, 5: True, 6: True},
+                    {7: True, 8: True, 9: True},
+                    {1: True, 4: True, 7: True},
+                    {2: True, 5: True, 8: True},
+                    {3: True, 6: True, 9: True},
+                    {1: True, 5: True, 9: True},
+                    {3: True, 5: True, 7: True})
 
-    def fill_field_x(self):
+    def fill_field(self, player):
         while True:
             try:
-                slot = int(input('Player X. Enter your slot number: ')) - 1
-                if 0 <= slot <= 8 and self.slots_x[slot] == '' and self.slots_o[slot] == '':
-                    self.slots_x[slot] = 'X'
+                slot = int(input(f'Player {player}. Enter your slot number: '))
+                if 1 <= slot <= 9 and self.slots.get(slot) == '':
+                    self.slots[slot]= player
                 else:
                     print('Invalid slot index. Please enter a free slot with index 1-9:')
                     continue
@@ -26,53 +25,36 @@ class Game:
             else:
                 break
 
-    def fill_field_o(self):
-        while True:
-            try:
-                slot = int(input('Player O. Enter your slot number: ')) - 1
-                if 0 <= slot <= 8 and self.slots_x[slot] == '' and self.slots_o[slot] == '':
-                    self.slots_o[slot] = 'O'
-                else:
-                    print('Invalid slot index. Please enter a free slot with index 1-9:')
-                    continue
-            except ValueError:
-                print('slot index should be number')
-                continue
-            else:
-                break
-
-    def check_winner_x(self):
-        player_slots = [bool(item) for item in self.slots_x]
-        if player_slots in self.win:
-            return True
-
-    def check_winner_o(self):
-        player_slots = [bool(item) for item in self.slots_o]
-        if player_slots in self.win:
-            return True
+    def check_winner(self, player):
+        player_slots = {}
+        for key, value in self.slots.items():
+            if value == player:
+                player_slots.update({key: bool(value)})
+        for item in self.win:
+            counter = 0
+            for key, value in item.items():
+                if value == player_slots.get(key):
+                    counter += 1
+                if counter == 3:
+                    return True
 
     def draw_field(self):
-        field = self.slots_x[:]
-        for index, value in enumerate(field):
-            if value == '':
-                field[index] = self.slots_o[index]
-        print(f'{field[0].center(3)}|{field[1].center(3)}|{field[2].center(3)}')
+        print(f'{self.slots[1].center(3)}|{self.slots[2].center(3)}|{self.slots[3].center(3)}')
         print('-' * 12)
-        print(f'{field[3].center(3)}|{field[4].center(3)}|{field[5].center(3)}')
+        print(f'{self.slots[4].center(3)}|{self.slots[5].center(3)}|{self.slots[6].center(3)}')
         print('-' * 12)
-        print(f'{field[6].center(3)}|{field[7].center(3)}|{field[8].center(3)}')
+        print(f'{self.slots[7].center(3)}|{self.slots[8].center(3)}|{self.slots[9].center(3)}')
 
 
 game = Game()
 game.draw_field()
 while True:
-    game.fill_field_x()
+    game.fill_field('X')
     game.draw_field()
-    print([bool(item) for item in game.slots_x])
-    if game.check_winner_x():
+    if game.check_winner('X'):
         print('X is WINNER')
         break
-    game.fill_field_o()
+    game.fill_field('O')
     game.draw_field()
-    if game.check_winner_o():
+    if game.check_winner('O'):
         print('O is WINNER')
