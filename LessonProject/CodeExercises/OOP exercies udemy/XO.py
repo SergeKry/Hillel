@@ -58,3 +58,4 @@ while True:
     game.draw_field()
     if game.check_winner('O'):
         print('O is WINNER')
+        break
