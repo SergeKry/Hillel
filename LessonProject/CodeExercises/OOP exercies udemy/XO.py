@@ -15,7 +15,7 @@ class Game:
             try:
                 slot = int(input(f'Player {player}. Enter your slot number: '))
                 if 1 <= slot <= 9 and self.slots.get(slot) == '':
-                    self.slots[slot]= player
+                    self.slots[slot] = player
                 else:
                     print('Invalid slot index. Please enter a free slot with index 1-9:')
                     continue
@@ -48,14 +48,21 @@ class Game:
 
 game = Game()
 game.draw_field()
-while True:
-    game.fill_field('X')
-    game.draw_field()
-    if game.check_winner('X'):
-        print('X is WINNER')
-        break
+game.fill_field('X')
+game.draw_field()
+turn = 8
+final_msg = "It's a DRAW"
+while turn > 0:
     game.fill_field('O')
     game.draw_field()
     if game.check_winner('O'):
-        print('O is WINNER')
+        final_msg = 'O is WINNER'
         break
+    turn -= 1
+    game.fill_field('X')
+    game.draw_field()
+    if game.check_winner('X'):
+        final_msg = 'X is WINNER'
+        break
+    turn -= 1
+print(final_msg)
